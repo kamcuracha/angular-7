@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  h1Style: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  homeClick() {
+    this.h1Style = !this.h1Style; 
+  }
 }
