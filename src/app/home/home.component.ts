@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +10,13 @@ export class HomeComponent implements OnInit {
 
   h1Style: boolean = false;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
 
   homeClick() {
-    this.h1Style = !this.h1Style; 
+    this.h1Style = !this.h1Style;
+    this.data.dataServiceClick();
   }
 }
